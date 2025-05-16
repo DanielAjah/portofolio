@@ -11,9 +11,12 @@
   <header>
     <nav class="navbar">
       <a href="index.html" class="logo">WebKilat</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
-        ☰
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
+      
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Beranda</a></li>
         <li><a href="layanan.html">Layanan</a></li>
@@ -45,11 +48,12 @@
   </footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
   
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
     });
   </script>
   

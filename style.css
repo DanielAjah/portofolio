@@ -208,6 +208,7 @@ body {
   list-style: none;
   display: flex;
   gap: 25px;
+  border-radius: 12px; /* Tambahkan ini untuk efek rounded */
 }
 
 .nav-links li a {
@@ -239,32 +240,42 @@ body {
 
 .hamburger {
   display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  border: none;
+  background: none;
+  z-index: 1001;
 }
 
-.hamburger:hover {
-  transform: scale(1.1);
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
+
 
 /* RESPONSIVE NAVIGATION */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
   }
 
   .nav-links {
     flex-direction: column;
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    left: 10px;
+    width: calc(100% - 20px);
     background-color: #92bee3;
     padding: 20px 0;
+    border-radius: 12px; /* Rounded corner untuk dropdown */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Tambahan biar lebih modern */
     opacity: 0;
     transform: translateY(-20px);
     pointer-events: none;
@@ -280,6 +291,17 @@ body {
   .nav-links li {
     margin: 10px 0;
     text-align: center;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -7px);
   }
 }
 
