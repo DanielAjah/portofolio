@@ -9,9 +9,12 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="navbar">
       <a href="index.html" class="logo">WebKilat</a>
-      <ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Beranda</a></li>
         <li><a href="layanan.html">Layanan</a></li>
         <li><a href="harga.html">Harga</a></li>
@@ -19,6 +22,7 @@
       </ul>
     </nav>
   </header>
+   
 
   <main class="container">
     <h1>Kontak Kami</h1>
@@ -39,5 +43,16 @@
   <footer>
     <p>&copy; 2025 WebKilat. Semua hak dilindungi.</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+  
 </body>
 </html>

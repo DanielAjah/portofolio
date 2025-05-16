@@ -9,9 +9,12 @@
 </head>
 <body>
   <header>
-    <nav>
+    <nav class="navbar">
       <a href="index.html" class="logo">WebKilat</a>
-      <ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Beranda</a></li>
         <li><a href="layanan.html">Layanan</a></li>
         <li><a href="harga.html" class="active">Harga</a></li>
@@ -19,16 +22,16 @@
       </ul>
     </nav>
   </header>
+    
 
   <main class="container">
     <h1>Daftar Harga Terjangkau</h1>
     <section class="pricing">
       <article class="price-card">
-        <h2>Landing Page</h2>
-        <p>Rp 350.000</p>
+        <h2>Portofolio</h2>
+        <p>Rp 299.000</p>
         <ul>
           <li>Desain menarik</li>
-          <li>Optimasi konversi dasar</li>
           <li>Sudah termasuk hosting</li>
           <li>Custom domain</li>
           <li>Support 1 bulan</li>
@@ -36,7 +39,7 @@
       </article>
       <article class="price-card">
         <h2>Website UMKM</h2>
-        <p>Rp 499.000</p>
+        <p>Rp 350.000</p>
         <ul>
           <li>Website responsif</li>
           <li>Desain custom</li>
@@ -71,5 +74,15 @@
   <footer>
     <p>&copy; 2025 WebKilat. Semua hak dilindungi.</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>  
+  
 </body>
 </html>

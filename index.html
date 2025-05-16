@@ -10,9 +10,12 @@
 <body>
 
   <header>
-    <nav>
-      <a href="#" class="logo">WebKilat</a>
-      <ul>
+    <nav class="navbar">
+      <a href="index.html" class="logo">WebKilat</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        ☰
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active">Beranda</a></li>
         <li><a href="layanan.html">Layanan</a></li>
         <li><a href="harga.html">Harga</a></li>
@@ -20,6 +23,7 @@
       </ul>
     </nav>
   </header>
+    
 
   <main class="container">
     <section class="hero">
@@ -47,5 +51,15 @@
     <p>© 2025 WebKilat - Jasa Pembuatan Website</p>
   </footer>
 
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+  
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+  
+  
 </body>
 </html>
