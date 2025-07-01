@@ -18,6 +18,8 @@ body {
 
 /* HEADER & NAVIGATION */
 header {
+  position: relative;
+  z-index: 1000;
   background-color: #92bee3;
   padding: 15px 20px;
   animation: fadeInUp 0.6s ease forwards;
@@ -91,7 +93,12 @@ header {
   cursor: pointer;
   border: none;
   background: none;
-  z-index: 1001;
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  
+  z-index: 9999;
 }
 
 .hamburger span {
