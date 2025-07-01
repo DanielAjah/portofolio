@@ -55,6 +55,18 @@
       hamburger.classList.toggle("active");
       navLinks.classList.toggle("active");
     });
+     const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.services article, .price-card, .contact-methods article').forEach(el => {
+    observer.observe(el);
+  });
   </script>
   
   
